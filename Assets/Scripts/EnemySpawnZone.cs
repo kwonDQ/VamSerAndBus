@@ -57,6 +57,8 @@ public class EnemySpawnZone : MonoBehaviour
                 enemy.transform.position = spawnPos;
                 enemy.transform.rotation = Quaternion.identity;
 
+                enemy.GetComponent<EnemyAIShooter>().SetTarget(Player.transform); // 적 플레이어 추적용
+
                 ActiveEnemies.Add(new EnemyInfo { EnemyObject = enemy, EnemyPrefab = enemyPrefab });
             }
             yield return new WaitForSeconds(SpawnInterval);

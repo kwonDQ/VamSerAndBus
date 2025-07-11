@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2810294479587548283}
   - component: {fileID: 8030156831534986904}
   - component: {fileID: -4126352741723958142}
+  - component: {fileID: -2102941038965246712}
   - component: {fileID: 871726456023335942}
   - component: {fileID: -2984587004560569978}
   m_Layer: 0
@@ -106,6 +107,24 @@ MonoBehaviour:
   CurrentHealth: 0
   DamageMultiplier: 0.5
   KnockbackForce: 5
+--- !u!114 &-2102941038965246712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7485087457022000743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 323637801cf19a94384f5274009efcbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ArrivalDistance: 5
+  RetreatDistance: 7
+  StopDistance: 4
+  MoveSpeed: 30
+  AttackCooldown: 1.5
+  ResponseLag: 0.2
 --- !u!50 &871726456023335942
 Rigidbody2D:
   serializedVersion: 4

@@ -415,7 +415,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyPrefabs:
   - {fileID: 4733153062374560648, guid: b5dbc9e8f63bae542b0e28eed0bf52a2, type: 3}
-  - {fileID: 8344997217546661562, guid: 62dfcba5f3c1e6d479bbd4be18704ab4, type: 3}
   SpawnInterval: 1.5
   SpawnDistance: 5
   SpawnAngleStart: 0
