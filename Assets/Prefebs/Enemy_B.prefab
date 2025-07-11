@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3220036538839231846}
   - component: {fileID: 7285631660653017411}
-  - component: {fileID: 3099390098569709444}
+  - component: {fileID: 6362248178305578830}
   - component: {fileID: 3325827719700420566}
   - component: {fileID: 1883403855471109492}
   m_Layer: 0
   m_Name: Enemy_B
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,7 +90,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3099390098569709444
+--- !u!114 &6362248178305578830
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,9 +99,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8344997217546661562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9855fa58b9829ca47a8f1819d38e594c, type: 3}
+  m_Script: {fileID: 11500000, guid: 65daba8cc04b7f346bbf131d2146e44c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHealth: 50
+  CurrentHealth: 0
+  DamageMultiplier: 0.5
+  KnockbackForce: 5
 --- !u!50 &3325827719700420566
 Rigidbody2D:
   serializedVersion: 4
@@ -115,7 +119,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -128,7 +132,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &1883403855471109492
 CircleCollider2D:
   m_ObjectHideFlags: 0

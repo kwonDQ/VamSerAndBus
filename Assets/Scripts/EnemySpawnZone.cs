@@ -68,10 +68,17 @@ public class EnemySpawnZone : MonoBehaviour
         for (int i = ActiveEnemies.Count - 1; i >= 0; i--)
         {
             var enemyInfo = ActiveEnemies[i];
-            if (Vector3.Distance(Player.transform.position, enemyInfo.EnemyObject.transform.position) > DespawnDistance)
+
+            if (enemyInfo.EnemyObject == null || !enemyInfo.EnemyObject.activeInHierarchy)
+            {
+                ActiveEnemies.RemoveAt(i); // 체력이 없어 죽은 적 리스트에서 제거
+                continue;
+            }
+
+            if (Vector2.Distance(Player.transform.position, enemyInfo.EnemyObject.transform.position) > DespawnDistance)
             {
                 EnemyPoolManager.Instance.ReturnEnemy(enemyInfo.EnemyPrefab, enemyInfo.EnemyObject);
-                ActiveEnemies.RemoveAt(i);
+                ActiveEnemies.RemoveAt(i); // 너무 멀어진 적 리스트에서 제거
             }
         }
     }

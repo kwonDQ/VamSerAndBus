@@ -7,7 +7,7 @@ public class EnemyPoolManager : MonoBehaviour
     public class EnemyPool // Enemy를 미리 생성해놓고 저장하는 클래스
     {
         public GameObject EnemyPrefab;
-        public int PoolSize = 10;
+        public int PoolSize;
         [HideInInspector] public Queue<GameObject> PoolQueue = new Queue<GameObject>();
     }
 
@@ -61,10 +61,10 @@ public class EnemyPoolManager : MonoBehaviour
         if (pool != null)
             pool.PoolQueue.Enqueue(enemy);
         else
-            Destroy(enemy); // 풀을 못 찾으면 파괴
+            Destroy(enemy); // 풀을 못 찾으면 파괴, 정상적인 프리펩이 넘어오지 않은 경우를 위한 예외처리 문구, 일반적으로 작동안함
     }
 
-    private EnemyPool FindPool(GameObject prefab) // 풀에 여유가 있는지, 들어갈 풀이 있는지 확인
+    private EnemyPool FindPool(GameObject prefab) // 이 프리펩이 어떤 풀에 속하는지 확인
     {
         foreach (var pool in EnemyPools) // EnemyPools에 있는 프리펩중에 준비되있는 풀 찾아서 있으면 반환 없으면 null
         {

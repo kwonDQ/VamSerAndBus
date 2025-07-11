@@ -604,11 +604,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyPrefabs:
   - {fileID: 8344997217546661562, guid: 62dfcba5f3c1e6d479bbd4be18704ab4, type: 3}
+  - {fileID: 7485087457022000743, guid: 1e3b8bbe88db08d43a45b8f726a337d0, type: 3}
   SpawnInterval: 1.5
   SpawnDistance: 5
   SpawnAngleStart: 0
   SpawnAngleEnd: 360
-  DespawnDistance: 40
+  DespawnDistance: 10
 --- !u!60 &774332052
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -687,6 +688,7 @@ GameObject:
   - component: {fileID: 1109431395}
   - component: {fileID: 1109431394}
   - component: {fileID: 1109431397}
+  - component: {fileID: 1109431398}
   - component: {fileID: 1109431393}
   - component: {fileID: 1109431392}
   - component: {fileID: 1109431396}
@@ -887,6 +889,20 @@ MonoBehaviour:
   BackwardSpeed: 50
   MexSpeed: 100
   TurnSpeed: 50
+--- !u!114 &1109431398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109431391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 241fc840a5b4016409cdc22aeb5c339d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 100
+  CurrentHealth: 0
 --- !u!1 &1420715626
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,6 +967,8 @@ MonoBehaviour:
   - EnemyPrefab: {fileID: 4733153062374560648, guid: b5dbc9e8f63bae542b0e28eed0bf52a2, type: 3}
     PoolSize: 8
   - EnemyPrefab: {fileID: 8344997217546661562, guid: 62dfcba5f3c1e6d479bbd4be18704ab4, type: 3}
+    PoolSize: 8
+  - EnemyPrefab: {fileID: 7485087457022000743, guid: 1e3b8bbe88db08d43a45b8f726a337d0, type: 3}
     PoolSize: 8
 --- !u!4 &1485767530
 Transform:
